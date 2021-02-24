@@ -24,7 +24,7 @@ I want to make withdrawals from my account.
 ```
 As a customer,
 So that I can see my transactions
-I want to print a bank statement
+I want to print a bank statement.
 ```
 
 ### Set up
