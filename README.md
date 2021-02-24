@@ -1,5 +1,4 @@
-#Bank Tech Tests - JavaScript
-
+# Bank Tech Tests - JavaScript
 Example of tech test to practice code quality and process.
 
 This is a reimplementation of my Ruby tech test, [available here](https://github.com/francescoFH/bank-tech-test).
@@ -27,6 +26,9 @@ As a customer,
 So that I can see my transactions
 I want to print a bank statement
 ```
+
+### Set up
+Installed Jasmine, a JS browser testing framework.
 
 ### Acceptance criteria
 **Given** a client makes a deposit of 1000 on 10-01-2021  
