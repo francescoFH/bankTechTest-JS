@@ -31,5 +31,14 @@ describe('Account', () => {
         '100.00 withdrawn. Current balance: 400.00'
       );
     });
+
+    it('updates balance when funds are withdrawned more than one time', () => {
+      const account = new Account()
+      account.deposit(500)
+      account.withdraw(100)
+      expect(account.withdraw(200)).toEqual(
+        '200.00 withdrawn. Current balance: 200.00'
+      );
+    });
   });
 });
