@@ -43,8 +43,8 @@ describe('Account', () => {
 
     it('return error when withdraw requests is higher than balance', () => {
       const account = new Account()
-      account.deposit(500)
-      expect(account.withdraw(200)).toEqual(
+      account.deposit(200)
+      expect(account.withdraw(500)).toEqual(
         'Insufficient funds'
       );
     })
