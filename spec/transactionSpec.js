@@ -17,5 +17,14 @@ describe('Transaction', () => {
       expect(transaction.display()).toEqual('27/02/2021 || 100.00 || || ');
       jasmine.clock().uninstall();
     });
+
+    it('has the debit amount in the third column', () => {
+      let date = new Date(2021, 1, 27);
+      jasmine.clock().install();
+      jasmine.clock().mockDate(date);
+      const transaction = new Transaction(null, 10000);
+      expect(transaction.display()).toEqual('27/02/2021 || || 100.00 || ');
+      jasmine.clock().uninstall();
+    });
   });
 });
