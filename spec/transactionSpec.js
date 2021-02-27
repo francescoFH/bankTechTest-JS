@@ -5,7 +5,7 @@ describe('Transaction', () => {
       jasmine.clock().install();
       jasmine.clock().mockDate(date);
       const transaction = new Transaction;
-      expect(transaction.display()).toEqual('27/2/2021 || || || ');
+      expect(transaction.display()).toEqual('27/03/2021 || || || ');
       jasmine.clock().uninstall();
     });
   });
