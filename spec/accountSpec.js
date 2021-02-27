@@ -40,5 +40,13 @@ describe('Account', () => {
         '200.00 withdrawn. Current balance: 200.00'
       );
     });
+
+    it('return error when withdraw requests is higher than balance', () => {
+      const account = new Account()
+      account.deposit(500)
+      expect(account.withdraw(200)).toEqual(
+        'Insufficient funds'
+      );
+    })
   });
 });
