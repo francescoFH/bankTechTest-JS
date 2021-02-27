@@ -11,6 +11,8 @@ class Account {
   }
 
   withdraw(amount) {
-    return '100.00 withdrawn. Current balance: 400.00';
+    let debit = toPence(amount)
+    this.balance -= debit
+    return `${asPounds(debit)} withdrawn. Current balance: ${asPounds(this.balance)}`;
   }
 }
