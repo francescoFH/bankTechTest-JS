@@ -8,22 +8,22 @@ describe('Account Feature', () => {
     const account = new Account();
 
     jasmine.clock().mockDate(dateOne);
-    acount.deposit(1000);
+    account.deposit(1000);
 
     jasmine.clock().mockDate(dateTwo);
-    acount.deposit(2000);
+    account.deposit(2000);
 
     jasmine.clock().mockDate(dateThree);
-    acount.withdraw(500);
+    account.withdraw(500);
 
     statementOutput = [
       'date || credit || debit || balance ',
       '23/02/2021 || || 500.00 || 2500.00 ',
-      '22/02/2021 || 2000 || || 3000.00 ',
-      '21/02/2021 || 1000 || || 1000.00 ',
+      '22/02/2021 || 2000.00 || || 3000.00 ',
+      '21/02/2021 || 1000.00 || || 1000.00 ',
     ].join('\n');
 
-    expect(account.statement()).toEqul(statementOutput);
+    expect(account.statement()).toEqual(statementOutput);
 
     jasmine.clock().uninstall();
   });

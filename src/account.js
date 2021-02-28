@@ -21,6 +21,14 @@ class Account {
     return `${asPounds(debit)} withdrawn. Current balance: ${asPounds(this.balance)}`;
   }
 
+  statement() {
+    const STATEMENT_HEADER = 'date || credit || debit || balance \n';
+    let statementRows = this.transactionHistory.map((transaction) => {
+      return transaction.display()
+    })
+    return STATEMENT_HEADER + statementRows.join('\n')
+  }
+
   addTransaction(obj) {
     const transaction = new this.transactionClass(obj);
     this.transactionHistory.unshift(transaction);
