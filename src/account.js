@@ -1,7 +1,9 @@
 class Account {
-  constructor() {
+  constructor(transactionClass = Transaction) {
     const STARTING_BALANCE = 0;
     this.balance = STARTING_BALANCE;
+    this.transactionClass = transactionClass;
+    this.transactionHistory = []
   }
 
   deposit(amount) {
