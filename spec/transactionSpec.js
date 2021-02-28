@@ -13,7 +13,7 @@ describe('Transaction', () => {
       let date = new Date(2021, 1, 27);
       jasmine.clock().install();
       jasmine.clock().mockDate(date);
-      const transaction = new Transaction(10000);
+      const transaction = new Transaction({ credit: 10000 });
       expect(transaction.display()).toEqual('27/02/2021 || 100.00 || || ');
       jasmine.clock().uninstall();
     });
@@ -22,7 +22,7 @@ describe('Transaction', () => {
       let date = new Date(2021, 1, 27);
       jasmine.clock().install();
       jasmine.clock().mockDate(date);
-      const transaction = new Transaction(null, 10000);
+      const transaction = new Transaction({ debit: 10000 });
       expect(transaction.display()).toEqual('27/02/2021 || || 100.00 || ');
       jasmine.clock().uninstall();
     });
@@ -31,7 +31,7 @@ describe('Transaction', () => {
       let date = new Date(2021, 1, 27);
       jasmine.clock().install();
       jasmine.clock().mockDate(date);
-      const transaction = new Transaction(null, null, 10000);
+      const transaction = new Transaction({ balance: 10000 });
       expect(transaction.display()).toEqual('27/02/2021 || || || 100.00 ');
       jasmine.clock().uninstall();
     });
