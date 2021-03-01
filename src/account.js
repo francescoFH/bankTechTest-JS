@@ -15,7 +15,7 @@ class Account {
     let credit = toPence(amount)
     this.balance += credit
     this._addTransaction({ credit: credit, balance: this.balance });
-    return this.transactionMessage(credit, 'deposited')
+    return this._transactionMessage(credit, 'deposited')
   }
 
   withdraw(amount) {
@@ -23,7 +23,7 @@ class Account {
     if (debit > this.balance) return 'Insufficient funds'
     this.balance -= debit
     this._addTransaction({ debit: debit, balance: this.balance });
-    return this.transactionMessage(debit, 'withdrawn')
+    return this._transactionMessage(debit, 'withdrawn')
   }
 
   transactionMessage(amount, action) {
