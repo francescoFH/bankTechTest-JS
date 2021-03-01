@@ -60,5 +60,16 @@ describe('Account', () => {
       account.deposit(100);
       expect(mockObj.Mock).toHaveBeenCalled();
     });
+
+    it("withdraw calls for new Transaction", () => {
+      let mockContainer = {
+        Mock: function () {},
+      };
+      spyOn(mockContainer, "Mock");
+      const account = new Account(mockContainer.Mock);
+      account.deposit(100);
+      account.withdraw(100);
+      expect(mockContainer.Mock).toHaveBeenCalledTimes(2);
+    });
   });
 });
