@@ -16,14 +16,16 @@ describe('Account Feature', () => {
     jasmine.clock().mockDate(dateThree);
     account.withdraw(500);
 
-    statementOutput = [
+    let statement = [
       'date || credit || debit || balance ',
       '23/02/2021 || || 500.00 || 2500.00 ',
       '22/02/2021 || 2000.00 || || 3000.00 ',
       '21/02/2021 || 1000.00 || || 1000.00 ',
     ].join('\n');
 
-    expect(account.statement()).toEqual(statementOutput);
+    spyOn(conole, 'log')
+    account.statement()
+    expect(console.log).toHaveBeenCalledWith(statement);
 
     jasmine.clock().uninstall();
   });
