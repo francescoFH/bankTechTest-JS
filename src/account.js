@@ -1,5 +1,9 @@
 class Account {
-  constructor(transactionClass = Transaction, printer = new StatementPrinter) {
+  constructor(
+    transactionClass = Transaction,
+    printer = new StatementPrinter()
+  ) {
+    
     const STARTING_BALANCE = 0;
     this.balance = STARTING_BALANCE;
     this.transactionClass = transactionClass;
@@ -23,7 +27,7 @@ class Account {
   }
 
   statement() {
-    return this.printer.print(this.transactionHistory);
+    this.printer.print(this.transactionHistory);
   }
 
   addTransaction(obj) {

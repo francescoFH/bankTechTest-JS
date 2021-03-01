@@ -23,7 +23,7 @@ describe('Account Feature', () => {
       '21/02/2021 || 1000.00 || || 1000.00 ',
     ].join('\n');
 
-    spyOn(conole, 'log')
+    spyOn(console, 'log')
     account.statement()
     expect(console.log).toHaveBeenCalledWith(statement);
 
