@@ -47,6 +47,18 @@ describe('Account', () => {
       expect(account.withdraw(500)).toEqual(
         'Insufficient funds'
       );
-    })
+    });
+  });
+
+  describe('uses Transaction class', () => {
+    it('deposit calls for new Transaction', () => {
+      let mockObj = {
+        Mock: function () {},
+      };
+      spyOn(mockObj, 'Mock');
+      const account = new Account(mockObj.Mock);
+      account.deposit(100);
+      expect(mockObj.Mock).toHaveBeenCalled();
+    });
   });
 });
