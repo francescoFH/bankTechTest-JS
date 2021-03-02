@@ -5,6 +5,22 @@ This is a reimplementation of my Ruby tech test, [available here](https://github
 
 It allows you to create an account, deposit funds into it, withdraw funds from it, and print statements.
 
+### How to Run the App
+```
+$ git clone https://github.com/francescoFH/bank-tech-test
+$ open SpecRunner.html
+open JavaScript console
+  > let account = new Account
+  > account.deposit(1000)
+  > account.deposit(3500)
+  > account.withdraw(500)
+  > account.statement()
+    date || credit || debit || balance
+    02/03/2021 ||  || 3000.00 || 500.00
+    02/03/2021 || 2500.00 ||  || 3500.00
+    02/03/2021 || 1000.00 ||  || 1000.00
+```
+
 ### User Stories
 ```
 As a customer,

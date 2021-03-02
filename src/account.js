@@ -26,7 +26,7 @@ class Account {
     return this._transactionMessage(debit, 'withdrawn')
   }
 
-  transactionMessage(amount, action) {
+  _transactionMessage(amount, action) {
     let currentBalance = asPounds(this.balance)
     let pounds = asPounds(amount);
     return `${pounds} ${action}. Current balance: ${currentBalance}`
