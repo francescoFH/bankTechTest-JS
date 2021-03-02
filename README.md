@@ -29,6 +29,14 @@ Installed Jasmine, a JS browser testing framework.
 $ open SpecRunner.html
 ```
 
+# Approach
+I have created different classes to keep my app simple and readable:
+  * account class to be able to create accounts, make deposits and withdraws and to see   statements
+  * conversions class to be able to convert the amount to pence
+  * transaction class to be able to display transaction with date and deposit/withdraw/balance
+  * moment class to be able to convert date objects into formatted strings. I have included a local copy of a small library in src/moment.min.js  
+  * statementPrinter class to be able to print the statement correctly
+
 ### User Stories
 ```
 As a customer,
