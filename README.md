@@ -20,7 +20,7 @@ open JavaScript console on browser
     02/03/2021 || 2500.00 ||  || 3500.00
     02/03/2021 || 1000.00 ||  || 1000.00
 ```
-<img src="https://github.com/francescoFH/bankTechTest-JS/blob/main/JS-console.png" width="300" height="300">
+<img src="https://github.com/francescoFH/bankTechTest-JS/blob/main/JS-console.png" width="500" height="300">
 
 ### User Stories
 ```
