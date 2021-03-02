@@ -22,6 +22,13 @@ open JavaScript console on browser
 ```
 <img src="https://github.com/francescoFH/bankTechTest-JS/blob/main/JS-console.png" width="400" height="300">
 
+
+### To Test the App
+Installed Jasmine, a JS browser testing framework.
+```
+$ open SpecRunner.html
+```
+
 ### User Stories
 ```
 As a customer,
@@ -43,9 +50,6 @@ As a customer,
 So that I can see my transactions
 I want to print a bank statement.
 ```
-
-### Set up
-Installed Jasmine, a JS browser testing framework.
 
 ### Acceptance criteria
 **Given** a client makes a deposit of 1000 on 10-01-2021  
