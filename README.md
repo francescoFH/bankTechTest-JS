@@ -7,7 +7,7 @@ It allows you to create an account, deposit funds into it, withdraw funds from i
 
 ### How to Run the App
 ```
-$ git clone https://github.com/francescoFH/bank-tech-test
+$ git clone https://github.com/francescoFH/bankTechTest-JS
 $ open SpecRunner.html
 open JavaScript console on browser
   > let account = new Account
@@ -23,7 +23,7 @@ open JavaScript console on browser
 <img src="https://github.com/francescoFH/bankTechTest-JS/blob/main/JS-console.png" width="400" height="300">
 
 
-### To Test the App
+### How to Test the App
 Installed Jasmine, a JS browser testing framework.
 ```
 $ open SpecRunner.html
