@@ -9,7 +9,7 @@ It allows you to create an account, deposit funds into it, withdraw funds from i
 ```
 $ git clone https://github.com/francescoFH/bank-tech-test
 $ open SpecRunner.html
-open JavaScript console
+open JavaScript console on browser
   > let account = new Account
   > account.deposit(1000)
   > account.deposit(3500)
@@ -20,6 +20,7 @@ open JavaScript console
     02/03/2021 || 2500.00 ||  || 3500.00
     02/03/2021 || 1000.00 ||  || 1000.00
 ```
+![screenshot](JS-console.png)
 
 ### User Stories
 ```
