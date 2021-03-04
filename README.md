@@ -22,7 +22,6 @@ open JavaScript console on browser
 ```
 <img src="https://github.com/francescoFH/bankTechTest-JS/blob/main/JS-console.png" width="400" height="300">
 
-
 ### How to Test the App
 Installed Jasmine, a JS browser testing framework.
 ```
